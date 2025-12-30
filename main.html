@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal da Nutrição</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>🎵📸 Portal da Nutrição</h1>
+
+    <div class="top-controls">
+      <input id="busca" type="text" placeholder="Buscar artigos...">
+
+      <select id="categoria">
+        <option value="todas">Todas categorias</option>
+        <option value="frutas">Frutas</option>
+        <option value="vegetais">Legumes e Vegetais</option>
+        <option value="carnes">Carnes</option>
+        <option value="saude">Saúde</option>
+      </select>
+
+      <button id="temaBtn">🌙 Alternar tema (Claro/Escuro)</button>
+    </div>
+
+    <nav>
+      <button data-page="artigos">Artigos</button>
+      <button data-page="podcasts">Podcasts</button>
+      <button data-page="videos">Vídeos</button>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ARTIGOS -->
+    <section id="artigos" class="pagina ativa">
+      <h2>📰 Artigos</h2>
+
+      <div id="listaArtigos" class="grid"></div>
+
+      <div class="paginacao">
+        <button id="voltar">⬅ Anterior</button>
+        <span id="infoPagina"></span>
+        <button id="avancar">Próxima ➡</button>
+      </div>
+    </section>
+
+
+    <!-- MÚSICAS -->
+    <section id="musicas" class="pagina">
+      <h2>🎧 Podcasts</h2>
+
+      <div class="card">
+        <h3>Ferro</h3>
+        <audio controls src="musicas/musica1.mp3"></audio>
+      </div>
+
+      <div class="card">
+        <h3>Cálcio</h3>
+        <audio controls src="musicas/musica2.mp3"></audio>
+      </div>
+
+      <div class="card">
+        <h3>Magnésio</h3>
+        <audio controls src="musicas/musica1.mp3"></audio>
+      </div>
+
+      <div class="card">
+        <h3>Zinco</h3>
+        <audio controls src="musicas/musica2.mp3"></audio>
+      </div>
+    </section>
+
+
+    <!-- VÍDEOS -->
+    <section id="videos" class="pagina">
+      <h2>🎬 Vídeos</h2>
+
+      <div class="card">
+        <video controls src="videos/video1.mp4"></video>
+      </div>
+
+      <div class="card">
+        <video controls src="videos/video2.mp4"></video>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>Portal da Nutrição — Conteúdo educativo multimídia</p>
+  </footer>
+
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="fecharLightbox()">
+    <img id="lightbox-img">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
